@@ -1,0 +1,39 @@
+""" Challenge 3: Creating a calculator """
+""" Delacaration of functions"""
+def add(nb1,nb2):
+  return(nb1 + nb2)
+
+def sub(nb1,nb2):
+  return(nb1 - nb2)
+
+def mul(nb1,nb2):
+  return(nb1 * nb2)
+
+def div(nb1,nb2):
+  if nb2 != 0:
+    return(nb1 / nb2)
+  else:
+    print("invalid operation, devision on zero")
+
+""" Calculator"""
+a = "true"
+while a == "true":
+  expression = input("Enter the expression you want to calculate (number1 operation(+,-,*,/) number2):")
+  expression = expression.split()
+  nb1 = float(expression[0])
+  ope = expression[1]
+  nb2 = float(expression[2])
+  
+  if ope == "+":
+    print("result: ",add(nb1,nb2))
+  elif ope == "-":  
+    print("result: ",sub(nb1,nb2))
+  elif ope == "*":  
+    print("result: ",mul(nb1,nb2))
+  elif ope == "/":  
+    print("result: ",div(nb1,nb2))
+  
+  else: 
+    print("invalid operation!")
+  a = input(" You want to calculate another mathematical expression? true/false :")
+  
